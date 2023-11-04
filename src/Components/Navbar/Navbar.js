@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import './Navbar.css'; // Import the CSS file
 
 function Navbar() {
@@ -40,7 +41,7 @@ function Navbar() {
         <li className="link">
           <a href="#">Appointments</a>
         </li>
-        <li className="link">
+        {/* <li className="link">
           <a href="../Sign_Up//Sign_Up.html">
             <button className="btn1">Sign Up</button>
           </a>
@@ -49,7 +50,17 @@ function Navbar() {
           <a href="../Login/Login.html">
             <button className="btn1">Login</button>
           </a>
-        </li>
+        </li> */}
+        <li className="link">
+            <Link to="/signup">
+              <button className="btn1">Sign Up</button>
+            </Link>
+          </li>
+          <li className="link">
+            <Link to="/login">
+              <button className="btn1">Login</button>
+            </Link>
+          </li>
       </ul>
     </nav>
   );
